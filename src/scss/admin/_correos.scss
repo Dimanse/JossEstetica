@@ -1,0 +1,146 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.correos{
+
+    &__heading{
+        @include m.nombre-pagina;
+        margin: 5rem 0 0 0;
+    }
+
+    &__descripcion-span{
+        font-weight: v.$bold;
+    }
+
+    &__contenedor{
+        padding: 0 2rem;
+        
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    &__grid{
+        margin-top: 5rem;
+        padding-bottom: 3rem;
+        border-bottom: 2px solid v.$gris-claro;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:last-of-type{
+            border: none;
+        }
+        @include m.tablet{
+            // @include m.grid(6, 1rem);
+        }
+    }
+    &__container{
+        @include m.grid(1, 1rem);
+        @include m.desktop{
+            @include m.grid(5, 3rem);
+        }
+    }
+
+    &__div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include m.desktop{
+            flex-direction: column;
+        }
+        
+    }
+
+    &__nombre{
+        @include m.descripcion-pagina;
+        text-align: left;
+        margin: 0;
+        color: v.$gris;
+        font-weight: v.$bold;
+    }
+
+    &__span{
+        font-weight: v.$delgada;
+        margin:0 0 0 2rem ;
+        color: v.$gris;
+        @include m.desktop{
+            margin: 1rem 0 0 0
+        }
+
+        &--mensaje{
+            @extend .correos__span;
+            margin-top: 2rem;
+        }
+    }
+
+    &__mensaje{
+        flex: 1;
+        margin-top: 3rem;
+        @include m.desktop{
+            padding: 0 2rem;
+        }
+    }
+
+    &__acciones{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        @include m.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__boton-contestar{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        @include m.desktop{
+
+            width: 20% !important;
+        }
+    }
+
+    &__whatsApp{
+        color: darken($color: v.$verde, $amount: 10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        // margin-bottom: 3rem;
+        
+        @include m.desktop{
+            margin: 0;
+        }
+        
+    }
+    .fa-whatsapp{
+        font-size: 3.5rem;
+    }
+    &__boton-eliminar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        @include m.desktop{
+            margin: 0;
+        }
+    }
+
+    
+    .fa-circle-xmark{
+        color: v.$rojoOscuro;
+        font-size: 2rem;
+        
+    }
+    
+    .fa-paper-plane{
+        color: v.$azul;
+        font-size: 2rem;
+    }
+}

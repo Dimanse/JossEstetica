@@ -1,0 +1,88 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.table{
+    width: 100%;
+    border-collapse: collapse; //Elimina el borde
+    &__thead{
+        background-color: v.$gris-oscuro;
+        color: v.$blanco;
+    }
+    &__th{
+        padding: 1rem;
+        text-align: left;
+    }
+
+    &__tr{
+        &:nth-child(even){ //even marca los pares y odd los impares
+            background-color: lighten(v.$marronSuave, 25%);
+
+        }
+    }
+
+    &__td{
+        padding: 1.5rem 1rem;
+
+        &--acciones{
+            @extend .table__td;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include m.desktop{
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            gap: 2rem;
+        }
+    }
+
+    &__accion{
+        all: unset;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: v.$bold;
+        text-shadow: .1rem .1rem .1rem v.$gris;
+        display: flex !important;
+        align-items: center !important;
+        gap: .5rem !important;
+
+        &--editar{
+            @extend .table__accion;
+            color: v.$azul;
+        }
+        &--ver{
+            @extend .table__accion;
+            color: v.$verde;
+        }
+
+        &--membresia{
+            @extend .table__accion;
+            color: v.$marronSuave;
+        }
+    
+        &--eliminar{
+            @extend .table__accion;
+            color: v.$rojo;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__boton-mostrar{
+        @include m.botonMostrar(v.$blanco, v.$marronSuave);
+    }
+
+    &__boton{
+        &--eliminar{
+            @include m.boton(v.$blanco, v.$rojoOscuro);
+        }
+        &--eliminar1{
+            @include m.botonMostrar1(v.$blanco, v.$rojoOscuro);
+        }
+    }
+
+    
+    
+}

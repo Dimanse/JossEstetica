@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.admin-logo{
+
+    &__texto{
+       
+        font-size: 2.5rem;
+        // color: darken($color: v.$verde, $amount: 18);
+        color:  v.$marronSuave;
+        text-align: center;
+        font-weight: v.$bold;
+        z-index: 99;
+        @include m.tablet{
+            font-size: 2.5rem;
+        }
+        
+        span{
+            color: v.$gris;
+            font-size: 2.5rem;
+            display: block;
+            font-family: v.$fuente-cursiva;
+            width: 10rem;
+            z-index: 0;
+            
+           
+        }
+
+        .admin-span1{
+            margin-left: 9rem;
+            margin-bottom: -1rem;
+            rotate: -20deg;
+            @include m.tablet{
+                margin-left: -2rem;
+            }
+            
+            @include m.desktop{
+                margin-left: -2rem; 
+            }
+            
+        }
+        .admin-span2{
+            margin-left: 16rem;
+            margin-top: -.5rem;
+            rotate: -20deg;
+
+            @include m.tablet{
+                margin-left: 5rem;
+            }
+            
+            @include m.desktop{
+                margin-left: 5rem; 
+            }
+        }
+    }
+}

@@ -1,0 +1,321 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin xl_desktop {
+    @media (min-width: v.$xl_desktop) {
+        @content;
+    }
+}
+
+@mixin boton($bgColor, $colorTexto) {
+    background-color: $colorTexto;
+    padding: 1rem 4rem;
+    color: $bgColor;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: 3px solid $bgColor;
+    border-radius: 3rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    
+   
+
+    &:hover {
+        background-color: $bgColor;
+        color: $colorTexto;
+        cursor: pointer;
+    }
+}
+@mixin botonModal($bgColor, $colorTexto) {
+    background-color: $colorTexto;
+    padding: .5rem .7rem;
+    color: $bgColor;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: 2px solid $bgColor;
+    border-radius: 3rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    // @include m.tablet{
+    //     display: flex;
+    //     width: auto;
+    // }
+
+    &:hover {
+        background-color: $bgColor;
+        color: $colorTexto;
+        cursor: pointer;
+    }
+}
+@mixin botonMostrar($bgColor, $colorTexto) {
+    background-color: $colorTexto;
+    padding: .5rem 2rem;
+    color: $bgColor;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px solid $bgColor;
+    border-radius: 3rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    // @include m.tablet{
+    //     display: flex;
+    //     width: auto;
+    // }
+
+    &:hover {
+        background-color: $bgColor;
+        color: $colorTexto;
+        cursor: pointer;
+    }
+}
+@mixin botonMostrar1($bgColor, $colorTexto) {
+    background-color: $colorTexto;
+    padding: .5rem 2rem;
+    color: $bgColor;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px solid $bgColor;
+    border-radius: 3rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    width: auto;
+    // display: inline-block;
+    // @include m.tablet{
+    //     display: flex;
+    //     width: auto;
+    // }
+
+    &:hover {
+        background-color: $bgColor;
+        color: $colorTexto;
+        cursor: pointer;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin contenedor{
+    width: min(95%, 130rem);
+    margin: 0 auto;
+}
+
+@mixin contenedor-medio{
+    width: min(95%, 110rem);
+    margin: 0 auto;
+}
+
+@mixin contenedor-md{
+    width: min(95%, 80rem);
+    margin: 0 auto; 
+}
+
+@mixin contenedor-sm{
+    width: min(95%, 60rem);
+    margin: 0 auto;
+}
+@mixin contenedor-auth{
+    width: min(95%, 60rem);
+    margin: 0 auto;
+    padding: 10% 0;
+}
+
+
+@mixin headings{
+    font-family: v.$fuente-principal;
+    font-weight: v.$black;
+    color: v.$marronSuave;
+    margin: 2rem 0;
+}
+
+@mixin nombre-pagina{
+    @include headings;
+    margin: 0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+@mixin descripcion-pagina{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: v.$delgada;
+    margin-bottom: 5rem;
+    color: v.$gris;
+
+}
+
+@mixin texto-fluido($min, $max){
+    font-size: clamp($min, -0.8rem + 10vw, $max);
+    
+}
+
+@mixin texto-degradado($inicio, $final){
+    background: linear-gradient(to right, $inicio, $final);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin logo{
+    color: v.$blanco;
+    text-align: center;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+    @include desktop{
+        text-align: left;
+        margin: 0;
+    }
+}
+
+@mixin menu-social($color, $size){
+
+    &--enlace{
+
+        &::before{
+            color: $color;
+            font-size: $size;
+            display: inline-block;
+            font-style: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 6 Brands";
+
+        }
+        &[href*="facebook.com"]::before{
+            content: "\f39e";
+        }
+        &[href*="twitter.com"]::before{
+            content: "𝕏";
+        }
+        &[href*="youtube.com/"]::before{
+            content: "\f167";
+        }
+        // &[href*="https://mailto:"]::before{
+        //     content: "\f0e0";
+        // }
+        // &[href*="wa.me"]::before{
+        //     content: "\f0e0";
+        // }
+        &[href*="instagram.com/"]::before{
+            content: "\f16d";
+        }
+        &[href*="tiktok.com/"]::before{
+            content: "\e07b";
+        }
+        &[href*="linkedin.com/"]::before{
+            content: "\f0e1";
+        }
+        &[href*="github.com/"]::before{
+            content: "\f09b";
+        }
+        &[href*="dribbble.com/"]::before{
+            content: "\f17d";
+        }
+        
+    }
+
+    &--ocultar{
+        display: none;
+    }
+}
+
+@mixin enlace{
+    color: v.$marronSuave;
+        font-size: 1.4rem;
+        font-weight: v.$bold;
+        // text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+
+        &:hover{
+            color: darken(v.$marronSuave, 10);
+            cursor: pointer;
+        }
+}
+@mixin enlace_logout{
+    color: v.$rojoOscuro;
+        font-size: 1.4rem;
+        font-weight: v.$bold;
+        // text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+
+        &:hover{
+            color: darken(v.$rojoOscuro, 10);
+            cursor: pointer;
+        }
+}
+
+@mixin shadow{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+@mixin shadow1{
+    box-shadow: rgb(85, 96, 112, .3) 0px 19px 38px, rgb(85, 96, 112, .22) 0px 15px 12px;
+}
+
+@mixin reset-lista{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin tags {
+    @include reset-lista;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    > li{
+        background-color: v.$azul;
+        padding: 1rem;
+        border-radius: .5rem;
+        font-size: 1.4rem;
+        color: v.$blanco;
+        font-weight: v.$bold;
+    }
+}
+
+@mixin card{
+    border: 1px solid lighten(v.$gris, 10);
+    padding: 3rem;
+
+    &__nombre{
+        font-weight: v.$black;
+        font-size: 2.6rem;
+        margin: 2rem 0;
+    }
+}
+
+
+@mixin bg-gradient($bg_color){
+    background-image: linear-gradient(to left top, $bg_color, lighten($bg_color, 15%));
+
+}

@@ -1,0 +1,9 @@
+@forward 'dashboard';
+@forward 'table';
+@forward 'paginacion';
+@forward 'ponentes';
+@forward 'bloques';
+@forward 'admin-logo';
+@forward 'categorias';
+@forward 'correos';
+@forward 'switches';

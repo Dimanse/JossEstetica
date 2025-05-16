@@ -1,0 +1,141 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+h1, h2, h3 {
+    @include m.headings;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p{
+    margin: 0;
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 3.6rem;
+    // color: darken($color: v.$verde, $amount: 18);
+    color:  v.$naranja;
+    text-align: center;
+    font-weight: v.$bold;
+    
+    span{
+        color: v.$gris;
+        font-size: 2.5rem;
+        display: block;
+        // text-transform: uppercase;
+        margin-top: 1.5rem;
+    }
+    &::after{
+        content: '';
+        background-image: url(../../../build/img/camp.webp);
+        display: block;
+        width: 15rem;
+        height: 10rem;
+        margin: 1.5rem auto 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 10rem;
+    }
+}
+.volante__espiral{
+    font-size: 5rem;
+    // color: darken($color: v.$verde, $amount: 18);
+    color:  v.$marronSuave;
+    text-align: center;
+    font-weight: v.$bold;
+    font-family: v.$fuente-cursiva;
+    
+    span{
+        color: v.$marronSuave;
+        font-size: 1.6rem;
+        display: block;
+        font-family: v.$fuente-principal;
+        font-weight: v.$delgada;
+        margin-top: 1rem;
+    }
+    &::before{
+        content: '';
+        background-image: url(../../../build/img/spa.webp);
+        display: block;
+        width: 12rem;
+        height: 10rem;
+        margin: 1rem auto 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 12rem;
+    }
+}
+
+
+.volante__encabezado{
+    font-size: 2rem;
+    // color: darken($color: v.$verde, $amount: 18);
+    color:  v.$marronSuave;
+    text-align: center;
+    font-weight: v.$bold;
+    text-transform: uppercase;
+    
+    span{
+        color: v.$marronSuave;
+        font-size: 3rem;
+        display: block;
+        // text-transform: uppercase;
+        margin-top: 1rem;
+        font-family: v.$fuente-cursiva;
+        text-transform: capitalize;
+    }
+}
+
+
+.text-center {
+    text-align: center;
+}
+[class$="__heading"]{
+    @include m.nombre-pagina;
+    text-shadow: .1rem .1rem .1rem v.$gris;
+}
+
+[class$="__descripcion"]{
+    @include m.descripcion-pagina;
+}
+
+.negrita{
+    font-weight: v.$bold;
+    // color: darken($color: v.$gris, $amount: 30);
+    line-height: 2.5rem;
+}
+.negrita-grande{
+    @extend .negrita;
+    font-size: 2.2rem;
+
+}
+.negrita-suave{
+    font-weight: v.$regular;
+}
+.subrayado{
+    text-decoration: underline;
+}
+
+.advertencia{
+    color: v.$rojoOscuro;
+    width: 100%;
+}
+.azul{
+    color: v.$indigo;
+    width: 100%;
+}
+
+.blue{
+    color: v.$indigo;
+}

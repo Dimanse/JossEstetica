@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+// 
+
+
+
+
+
+
+.wrapper {
+    display: flex;
+    padding: 4px;
+    background-color: v.$marronSuave;
+    width: 25rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+  }
+  
+  .custom-input {
+    flex-grow: 1;
+
+  }
+  
+  .custom-input input[type=radio] {
+    display: none;
+  }
+  
+  .custom-input label {
+    display: block;
+    padding: 6px 8px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition : all .4s 0s ease;
+  }
+  
+  .custom-input input[type=radio]:checked + label {
+    background-color: v.$beige;
+    color: v.$marronSuave;
+    border-radius: 4px;
+  }
+
+  .contenedor-wraper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
