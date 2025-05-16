@@ -1,0 +1,29 @@
+{
+  "name": "jossestetica",
+  "version": "1.0.0",
+  "description": "Pagina web para centro de masajes y estética, creado con html, sass, javaScript, php, mvc.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimanse/JossEstetica.git"
+  },
+  "author": "Domingo Curbeira \"Dimanse\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dimanse/JossEstetica/issues"
+  },
+  "homepage": "https://github.com/Dimanse/JossEstetica#readme",
+  "devDependencies": {
+    "glob": "^11.0.2",
+    "gulp": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.89.0",
+    "sharp": "^0.34.1"
+  }
+}
