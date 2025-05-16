@@ -1,0 +1,102 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.membresia{
+    &__imagen{
+        background-image: url(../img/membresia.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 30rem;
+        @include m.desktop{
+            height: 60rem;
+        }
+    }
+
+    &__contenedor{
+        @include m.contenedor-medio;
+        padding: 5rem 0;
+    }
+
+    &__header{
+        text-align: center;
+        color: v.$marronSuave;
+        font-size: 2.5rem;
+        font-weight: v.$bold;
+        
+    }
+
+    &__grid{
+        @include m.grid(1, 1rem);
+        padding:5rem 0 2rem 0;
+        @include m.desktop{
+            @include m.grid(3, 3rem);
+        }
+    }
+
+    &__target{
+        border-radius: 1rem;
+        border: 2px solid v.$marronSuave;
+        padding: 3rem;
+    }
+
+    &__target-titulo{
+        text-align: center;
+        color: v.$marronSuave;
+        font-size: 2.5rem;
+        font-weight: v.$bold;
+    }
+    
+    &__target-precio{
+        text-align: center;
+        color: v.$marronSuave;
+        font-size: 2.5rem;
+        font-weight: v.$bold;
+        margin-top: 3rem;
+    }
+
+    &__target-mes{
+        text-align: center;
+        color: v.$gris-oscuro;
+        font-size: 1.7rem;
+        margin-top: 1rem;
+    }
+
+    &__target-descripcion{
+        margin-top: 3rem;
+        font-size: 1.7rem;
+        text-align: center;
+        line-height: 2.5rem;
+        color: v.$gris-oscuro;
+    }
+
+
+    &__target-ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        height: 35rem;
+    }
+
+    &__target-li{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-size: 1.7rem;
+        color: v.$gris-oscuro;
+        margin-bottom: 2rem;
+    }
+
+    &__target-svg{
+        width: 3rem;
+    }
+
+    &__target-pago{
+        font-size: 1.7rem;
+        text-align: center;
+        color: v.$marronSuave;
+    }
+    
+
+
+}

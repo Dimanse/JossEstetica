@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.contenedor-app{
+    @include m.desktop{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+    }
+
+    .imagen{
+        
+        height: 30rem;
+        background-image: url(../img/numeros.webp);
+        background-size: cover;
+        background-position: center center;
+       
+        @include m.desktop{
+            // width: fit-content;
+            height: auto;
+            background-position: center center;
+        }
+    }
+
+    .app{
+       width: 100%;
+       padding: 1rem 0 0 0;
+       margin: 0 auto; 
+       overflow-y: scroll;
+       overflow-x: hidden;
+    //    background-color: v.$gris-clarito;
+       @include m.tablet{
+       }
+    }
+
+}
+

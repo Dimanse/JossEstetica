@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.contact__bg {
+  background-image: url(../img/contact.webp);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 20rem;
+}

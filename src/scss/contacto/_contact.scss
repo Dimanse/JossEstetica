@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contact{
+
+    &__bg{
+        
+        background: linear-gradient(270deg, rgba(39, 42, 47,0.4) 0%, rgba(39, 42, 47,0.2) 100%), url(../img/contact.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 30rem;
+        @include m.desktop{
+            height: 60rem;
+        }
+    }
+
+    &__head{
+        color: v.$blanco;
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: v.$bold;
+        padding-top: 14rem;
+        text-shadow: .1rem .1rem .1rem v.$gris-oscuro;
+        @include m.tablet{
+            font-size: 4rem;
+        }
+        @include m.desktop{
+            padding-top: 26rem;
+            font-size: 5.5rem;
+        }
+    }
+
+    &__contenedor{
+        padding: 5rem 2rem;
+        background-color: v.$marronSuave;
+    }
+
+    &__texto-descripcion{
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    &__texto-titulo{
+        text-align: center;
+        color: v.$beige;
+        text-shadow: .1rem .1rem .1rem v.$gris-oscuro;
+        font-size: 3.5rem;
+        font-weight: v.$bold;
+        margin-bottom: 3rem;
+        @include m.tablet{
+            font-size: 4rem;
+        }
+    }
+
+    &__texto{
+        text-align: center;
+        color: v.$beige;
+        text-shadow: .1rem .1rem .1rem v.$gris-oscuro;
+    }
+
+    &__grid{
+        margin: 5rem 0 0 0;
+        @include m.grid(1, 5rem);
+        @include m.desktop{
+            @include m.grid(2, 5rem);
+            padding: 0 10rem;
+        }
+    }
+
+    &__imagen{
+        width: 100%;
+        @include m.desktop{
+            height: 35rem;
+        }
+    }
+}

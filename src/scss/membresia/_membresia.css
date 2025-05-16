@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.membresia {
+  background-image: url(../img/membresia.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 60rem;
+}

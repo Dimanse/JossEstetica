@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto{
+    
+    &__contendor-blanco{
+        background-color: v.$blanco;
+        padding: 5rem;
+    } 
+
+    &__grid{
+        // margin-top: 3rem;
+        @include m.grid(1, 1rem);
+        @include m.desktop{
+            @include m.grid(2, 3rem);
+
+        }
+    }
+
+    &__contenedor-blanco-grid{
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+.mapa{
+    height: 45rem;
+}
+

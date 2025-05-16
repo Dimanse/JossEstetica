@@ -1,0 +1,299 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-enlaces{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contenedor-enlace{
+    display: flex;
+    justify-content: right;
+    padding: 0 5rem;
+}
+.contenedor-enlace1{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem 0 0;
+}
+
+// .contenedor-imagen{
+//     width: 100%;
+//     padding: 0 2rem;
+// }
+
+.contenedor-pequeño{
+    @include m.contenedor-sm
+}
+
+.boton-modal{
+    border:none;
+    border-bottom: 1px dashed v.$gris;
+    color: v.$gris !important;
+    background-color: transparent;
+    @include m.descripcion-pagina;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    text-align: left !important;
+    width: fit-content !important;
+
+    &:hover{
+        color: v.$negro !important;
+        border-bottom: 1px dashed v.$negro;
+        cursor: pointer;
+    }
+
+    &--tabla{
+        @extend .boton-modal;
+        margin:0 0 0 3rem;
+        
+    }
+}
+.boton-tabla{
+    border:none;
+    border-bottom: 1px dashed v.$gris;
+    background-color: transparent;
+    @include m.descripcion-pagina;
+    // padding: 0 1rem 0 0;
+    margin: 1.5rem auto;
+    width: fit-content;
+    
+
+    &:hover{
+        color: v.$negro;
+        border-bottom: 1px dashed v.$negro;
+        cursor: pointer;
+    }
+}
+
+.boton__biblico{
+    @include m.botonModal(v.$naranja, v.$blanco);
+    width: auto !important;
+}
+
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    // background-color: darken($color: v.$verde, $amount: 18);
+    background-color:  v.$naranja;
+    padding: 1rem 0;
+    color: v.$blanco;
+    margin-bottom: 2rem;
+}
+.titulo-pagina{
+    text-align: center;
+    text-transform: uppercase;
+    @include m.texto-fluido(1rem, 3rem);
+    font-weight: v.$bold;
+    padding: 1rem 0;
+    color: v.$azul;
+    margin-bottom: 2rem; 
+    @include m.tablet{
+
+        line-height: 4rem;
+    }
+}
+
+.explicacion-modal{
+    // flex: 1;
+    margin-top: 0;
+    color: v.$gris;
+    line-height: 2.6rem;
+    padding: 0 3rem;
+    font-size: 1.8rem;
+    text-align: left;
+        // span{
+        //     font-weight: v.$bold;
+        //     color: darken($color: v.$gris, $amount: 20)
+        // }
+        // .subrayado{
+        //     text-decoration: underline;
+        // }
+        &__texto{
+            @extend .explicacion-modal;
+            padding: 0;
+            // margin:0;
+            font-weight: v.$delgada;
+            
+            ;
+
+            &--indigo{
+              @extend .explicacion-modal__texto;
+              color: v.$indigo;  
+            }
+            &--marron{
+              @extend .explicacion-modal__texto;
+              color: v.$marron; 
+              font-size: 7rem;
+            }
+            &--marron-pequeña{
+              @extend .explicacion-modal__texto;
+              color: v.$marronSuave; 
+              
+            }
+            &--marron-clarito{
+              @extend .explicacion-modal__texto;
+              color: v.$marronClarito; 
+              font-size: 7rem;
+            }
+            // &--marron-oscuro{
+            //   @extend .explicacion-modal__texto;
+            //   color: v.$marronOscuro; 
+            //   font-size: 7rem;
+            // }
+            &--blanco{
+              @extend .explicacion-modal__texto;
+              color: v.$blanco;  
+            }
+            &--oscuro{
+                @extend .explicacion-modal__texto;
+              color: v.$moradoCard;
+              margin-top:2rem;
+            }
+            
+        }
+}
+.explicacion-modal-biblia{
+    @extend .explicacion-modal;
+    padding: 0;
+}
+
+
+
+.contenedor-grid{
+    // padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include m.tablet{
+        // padding: 0 5rem;
+    }
+}
+.contenedor-descripcion{
+    padding: 2rem 2rem 0 2rem;
+    // margin-top: 3rem;
+    width: 100%;
+    // &:nth-child(even){ //even marca los pares y odd los impares
+    //     background-color: lighten(v.$gris-claro, 22%);
+
+    // }
+    @include m.tablet{
+        
+        padding: 3rem 3rem 0 3rem;
+    }
+}
+
+.contenedor-grid-hijos{
+    padding: 0 2rem;
+    @include m.grid(3, 1rem);
+    @include m.tablet{
+        padding: 0 5rem;
+    }
+}
+
+.explicacion{
+    @include m.descripcion-pagina;
+    color: v.$gris;
+    text-align: left;
+    margin: 1.5rem 0;
+}
+.explicacion-sirios{
+    @include m.descripcion-pagina;
+    color: v.$gris;
+    text-align: left;
+    margin: 0;
+}
+.explicacion-centro{
+    color: v.$gris;
+    @include m.descripcion-pagina;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.explicacion-right{
+    color: v.$gris;
+    @include m.descripcion-pagina;
+    text-align: right;
+    margin: 1.5rem 0;
+}
+.explicacion-descripcion{
+    color: v.$gris;
+    @include m.descripcion-pagina;
+    text-align: left;
+    line-height: 2.4rem;
+    // span{
+    //     font-weight: v.$bold;
+    //     color: darken($color: v.$gris, $amount: 20)
+    // }
+}
+
+.boton-cerrar{
+    @include m.boton(v.$rojoOscuro, v.$blanco);
+    margin-top: 3rem;
+    width: auto;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.boton-modal1{
+    @include m.botonModal(v.$azul, v.$blanco);
+    // margin-top: 3rem;
+    width: auto;
+    padding: .5rem 2rem;
+
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.footer{
+   
+    text-align: center;
+    // color: darken($color: v.$verde, $amount: 18);
+    background-color: v.$beige;
+    color: v.$marronSuave; 
+    font-weight: v.$bold;
+    // margin: 5rem 0 0 0;
+    padding: 2rem 0;
+
+    // @include m.tablet{
+    //     background-color: darken($color: v.$verde, $amount: 18);
+    //     color: v.$blanco; 
+    // }
+
+    &__copyright{
+        margin: 0;
+        // padding-bottom: 2rem ;
+    }
+}
+
+.imagen-mapa{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.imagen-linea{
+
+    width: 100%;
+    // @include m.tablet{
+    //     width: 70%;
+
+    //     margin: 0 auto;
+    // }
+}
+.pie-pagina{
+    font-size: 1.4rem;
+    margin-top: 0;
+    text-align: center;
+    font-weight: v.$delgada;
+}
+
+.inicio{
+    &__form{
+        
+    }
+}
+
