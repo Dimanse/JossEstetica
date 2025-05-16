@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector("#fecha"),t=new Date,o=new Intl.DateTimeFormat("es-CR",{dateStyle:"full",timeStyle:"short",timeZone:"America/Costa_Rica"}).format(t);console.log(o);const n=document.createElement("P");n.classList.add("footer__copyright"),n.textContent=o,e.appendChild(n)}));

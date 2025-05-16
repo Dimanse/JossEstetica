@@ -1,0 +1,1 @@
+function iniciarApp(){buscarPorCodigo()}function buscarPorCodigo(){const o=document.querySelector("#terminoBusqueda"),n=document.querySelector("#buscadorButton");o.addEventListener("click",(function(o){console.log(n)}))}document.addEventListener("DOMContentLoaded",(function(){iniciarApp()}));
