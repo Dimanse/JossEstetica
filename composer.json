@@ -1,0 +1,21 @@
+{
+    "name": "domingocurbeira/joss-estetica",
+    "description": "Pagina web para centro de masajes y estética, creado con html, sass, javaScript, php, mvc.",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Controllers\\": "./controllers",
+            "Model\\": "./models",
+            "Classes\\": "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dimanse",
+            "email": "domingocurbeira@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
