@@ -1,0 +1,1 @@
+@use 'base/variables' as v;@use 'base/mixins' as m;.nav{list-style:none;width:100%;margin:0 auto}.nav>li{float:left}.nav li ul{display:none;position:absolute;min-width:140px}

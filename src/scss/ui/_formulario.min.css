@@ -1,0 +1,1 @@
+@use 'base/variables' as v;@use 'base/mixins' as m;.formulario{width:100%;display:flex;flex-direction:column}.formulario__campo{margin:1rem 0;display:flex}.formulario__input{flex:1}

@@ -1,0 +1,103 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegador{
+    padding: 2rem 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$beige;
+    @include m.desktop{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    &__enlace{
+        color: v.$marronSuave;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+
+        &:hover{
+            color: v.$blanco;
+        }
+    }
+
+    
+}
+
+.navegador1{
+    padding: 2rem 0;
+    display:flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    background-color: v.$beige;
+    width: 100%;
+    @include m.desktop{
+        // flex-direction: row;
+        // justify-content: space-around;
+    }
+
+    &__nav{
+        list-style:none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        @include m.desktop{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+    }
+
+    &__li,
+    &__enlace,
+    &__submenu-ul,
+    &__submenu-li{
+            float:left;
+        
+    }
+
+    &__li{
+        &:hover{
+            ul{
+                display:block;
+               
+            }
+
+            li{
+                display:block;
+                background-color: v.$beige;
+                padding: 0 2rem;
+            }
+        }
+    }
+
+    &__submenu-ul{
+        display:none;
+        position:absolute;
+        min-width:140px;
+        
+        height: 20rem;
+    }
+
+    &__submenu-li{
+        position:relative;
+        top: 3rem;
+        right: 6rem;
+        z-index: 99;
+    }
+    
+    &__enlace{
+        color: v.$marronSuave;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+
+        &:hover{
+            color: v.$blanco;
+        }
+    }
+}

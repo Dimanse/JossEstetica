@@ -1,0 +1,1 @@
+@use 'base/variables' as v;@use 'base/mixins' as m;.acciones{margin-top:3rem;display:flex;justify-content:space-between}

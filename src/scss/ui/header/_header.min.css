@@ -1,0 +1,1 @@
+@use 'base/variables' as v;@use 'base/mixins' as m;.header{min-height:60rem;background-image:url(../img/grafico.svg)}

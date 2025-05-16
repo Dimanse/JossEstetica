@@ -1,0 +1,192 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.servicios{
+
+    &__background{
+        background: linear-gradient(270deg, rgba(39, 42, 47,0.4) 0%, rgba(39, 42, 47,0.2) 100%), url(../img/servicios.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 30rem;
+        @include m.desktop{
+            height: 60rem;
+        }
+    }
+    &__background1{
+        background: linear-gradient(270deg, rgba(39, 42, 47,0.4) 0%, rgba(39, 42, 47,0.2) 100%), url(../img/estetica.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 30rem;
+        @include m.desktop{
+            height: 60rem;
+        }
+    }
+
+    &__title{
+        color: v.$blanco;
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: v.$bold;
+        padding-top: 14rem;
+        text-shadow: .1rem .1rem .1rem v.$gris-oscuro;
+        @include m.tablet{
+            font-size: 4rem;
+        }
+        @include m.desktop{
+            padding-top: 26rem;
+            font-size: 5.5rem;
+        }
+    }
+
+    &__contenedor{
+        padding: 5rem 2rem;
+        background-color: v.$marronSuave;
+    }
+
+    &__texto-descripcion{
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    &__texto{
+        text-align: center;
+        color: v.$beige;
+        text-shadow: .1rem .1rem .1rem v.$gris-oscuro;
+        margin-bottom: 5rem;
+    }
+
+    &__contenedor_grid{
+        
+       
+    }
+
+    &__grid{
+        @include m.grid(1, 5rem);
+        @include m.contenedor-medio;
+        margin-bottom: 5rem;
+        @include m.desktop{
+            @include m.grid(3, 5rem);
+        }
+    }
+
+    &__grid-ancho{
+        @include m.contenedor-medio;
+        // @include m.grid(1, 0);
+        @include m.desktop{
+            @include m.grid(3, 0);
+        }
+    }
+
+    &__card{
+        padding: 3rem;
+        background-color: v.$beige;
+        border-radius: .5rem;
+        @include m.shadow;
+
+        
+    }
+    &__card-imagen{
+        padding: 3rem;
+        background-color: v.$beige;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        @include m.desktop{
+            height: 26rem;
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+        }
+        
+
+        
+    }
+
+    &__contenedor-imagen{
+        margin-bottom: 3rem;
+    }
+    
+
+    &__imagen{
+        width: 100%;
+        @include m.desktop{
+            height: 20rem;
+        }
+    }
+    &__imagen-pareja{
+        width: 100%;
+        @include m.desktop{
+            height: 20rem;
+        }
+        
+    }
+
+    &__contenedor-height{
+        display: flex;
+        flex-wrap: wrap;
+        // align-content: stretch;
+        justify-content: center;
+        height: auto;
+
+        
+    }
+    &__contenedor-height-parejas{
+        margin-top: -3rem;
+        grid-column: 2/4;
+        padding: 0 3rem;
+        background-color: v.$beige;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        @include m.desktop{
+            padding: 3rem 3rem 0 0;
+            margin-top: 0;
+        }
+
+        
+    }
+
+    &__encabezado{
+        font-size: 2.5rem;
+        text-align: center;
+        color: v.$blanco;
+        text-shadow: .1rem .1rem .1rem v.$negro;
+        margin-bottom: 3rem;
+    }
+
+    &__descripcion{
+        color: v.$marronSuave;
+        line-height: 2.5rem;
+        &--parejas{
+            color: v.$marronSuave;
+            line-height: 2.5rem;
+            font-size: 1.7rem;
+            font-weight: v.$delgada;
+            margin: 0 0 3rem 0;
+        }
+    }
+
+    &__contenedor-precio{
+
+        &--parejas{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__precio{
+        font-weight: v.$delgada;
+        color: v.$blanco;
+        text-shadow: .1rem .1rem .1rem v.$negro;
+        margin-bottom: 3rem;
+        span{
+            font-weight: v.$bold;
+            color: v.$marronSuave;
+            text-shadow: none;
+            font-size: 2.5rem;
+        }
+
+        @include m.desktop{
+            margin-bottom: 0;
+        }
+    }
+}

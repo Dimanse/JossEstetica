@@ -1,0 +1,49 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    background-color: v.$beige;
+
+    
+    
+    &__logo-texto{
+       
+        font-size: 4rem;
+        // color: darken($color: v.$verde, $amount: 18);
+        color:  v.$marronSuave;
+        text-align: center;
+        font-weight: v.$bold;
+        z-index: 99;
+        @include m.tablet{
+            font-size: 5rem;
+        }
+        
+        span{
+            color: v.$gris;
+            font-size: 4.5rem;
+            display: block;
+            font-family: v.$fuente-cursiva;
+            width: 10rem;
+            z-index: 0;
+            
+           
+        }
+
+        .span1{
+            margin-left: 6rem;
+            margin-bottom: -2rem;
+            rotate: -20deg;
+            @include m.tablet{
+                margin-left:9rem;
+            }
+        }
+        .span2{
+            margin-left: 17rem;
+            margin-top: -1rem;
+            rotate: -20deg;
+            @include m.tablet{
+                margin-left: 22rem;
+            }
+        }
+}
+}

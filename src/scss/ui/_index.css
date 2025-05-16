@@ -1,0 +1,10 @@
+@forward 'formulario';
+@forward 'header';
+@forward 'footer';
+@forward 'social';
+@forward 'alertas';
+@forward 'logo';
+@forward 'navegador';
+@forward 'video';
+@forward 'buscador';
+@forward 'nav';

@@ -1,0 +1,156 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tarjeta{
+    // background-color: v.$beige;
+    padding: 5rem 2rem;
+
+    &__texto-titulo{
+        color: v.$marronSuave;
+        font-weight: v.$bold;
+        font-size: 3rem;
+        text-align: center;
+    }
+    &__contenedor-descripcion{
+        max-width: 60rem;
+        margin: 3rem auto 0 auto;
+    }
+
+    &__descripcion{
+        line-height: 2.5rem;
+    }
+
+    &__contenedor{
+        @include m.contenedor-medio;
+        
+    }
+
+    &__grid{
+        @include m.grid(1, 5rem);
+    }
+
+    &__card{
+        background-image:
+        radial-gradient(at 15% 19%, hsla(27,35%,52%,1) 0px, transparent 50%),
+        radial-gradient(at 19% 82%, hsla(46,25%,80%,1) 0px, transparent 50%),
+        radial-gradient(at 83% 83%, hsla(27,35%,52%,1) 0px, transparent 50%),
+        radial-gradient(at 95% 12%, hsla(46,25%,80%,1) 0px, transparent 50%),
+        radial-gradient(at 47% 52%, hsla(27,35%,52%,1) 0px, transparent 50%),
+        radial-gradient(at 94% 12%, hsla(46,25%,80%,1) 0px, transparent 50%);
+        @include m.shadow;
+    }
+
+    &__card-grid{
+        @include m.grid(1, 2rem);
+        @include m.tablet{
+
+            @include m.grid(3, 5rem);
+            align-items: center;
+        }
+    }
+
+    &__imagen{
+        width: 100%;
+        
+    }
+
+    &__card-informacion{
+        padding: 2rem ;
+        margin-top: -7rem;
+        @include m.tablet{
+
+            margin-top: 0;
+            grid-column: 2 / 4;
+        }
+    }
+
+    &__logo-texto{
+        font-size: 3rem;
+        // color: darken($color: v.$verde, $amount: 18);
+        color:  v.$marronSuave;
+        text-align: center;
+        font-weight: v.$bold;
+        z-index: 99;
+        @include m.tablet{
+            font-size: 4rem;
+        }
+        
+        span{
+            color: v.$gris;
+            font-size: 2.6rem;
+            display: block;
+            font-family: v.$fuente-cursiva;
+            width: 10rem;
+            z-index: 0;
+            
+           
+        }
+
+        &-span1{
+
+            margin-left: 5rem;
+            margin-bottom: -1rem;
+            rotate: -20deg;
+            @include m.tablet{
+                margin-left: 8.5rem;
+                margin-bottom: -1.5rem;
+            }
+            
+            @include m.desktop{
+                margin-left: 22rem; 
+            }
+            
+        }
+        &-span2{
+            margin-left: 13rem;
+            margin-top: -.5rem;
+            rotate: -20deg;
+    
+            @include m.tablet{
+                margin-left: 20rem;
+            }
+            
+            @include m.desktop{
+                margin-left: 33.5rem; 
+            }
+        }
+    }
+
+    &__detalle-informacion{
+        @include m.grid(1, 1rem);
+        @include m.desktop{
+            @include m.grid(2, 5rem);
+        }
+    }
+
+    &__informacion-grid{
+        display: flex;
+        flex-direction: column;
+        
+        @include m.desktop{
+            flex-direction: row;
+        }
+    }
+
+    &__detalle-grid{
+        
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 1rem;
+        margin-right: 3rem;
+        align-items: center;
+    }
+
+    &__icono{
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    &__nombre{
+        color: v.$beige;
+        text-shadow: .1rem .1rem .1rem v.$negro;
+    }
+
+    
+}

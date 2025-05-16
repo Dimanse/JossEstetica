@@ -1,0 +1,1 @@
+@use 'base/variables' as v;@use 'base/mixins' as m;.navegador{padding:2rem 0;display:flex;flex-direction:column;justify-content:center;align-items:center}

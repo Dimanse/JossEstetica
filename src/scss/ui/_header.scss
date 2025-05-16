@@ -1,0 +1,110 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    
+    background-color: v.$beige;
+
+    &__grid{
+        @include m.grid(1, 5rem);
+        padding: 2rem;
+
+        @include m.desktop{
+            @include m.grid(3, 3rem);
+            padding: 3rem;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    &__telefono{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+    }
+
+    &__numero{
+        color: v.$marronSuave;
+        font-size: 2.5rem;
+    }
+
+    &__logo-texto{
+       
+            font-size: 4rem;
+            // color: darken($color: v.$verde, $amount: 18);
+            color:  v.$marronSuave;
+            text-align: center;
+            font-weight: v.$bold;
+            z-index: 99;
+            @include m.tablet{
+                font-size: 5rem;
+            }
+            
+            span{
+                color: v.$gris;
+                font-size: 4.5rem;
+                display: block;
+                font-family: v.$fuente-cursiva;
+                width: 10rem;
+                z-index: 0;
+                
+               
+            }
+
+            .span1{
+                margin-left: 6rem;
+                margin-bottom: -2rem;
+                rotate: -20deg;
+                @include m.tablet{
+                    margin-left: 23rem;
+                }
+                
+                @include m.desktop{
+                    margin-left: 9rem; 
+                }
+                
+            }
+            .span2{
+                margin-left: 17rem;
+                margin-top: -1rem;
+                rotate: -20deg;
+
+                @include m.tablet{
+                    margin-left: 37rem;
+                }
+                
+                @include m.desktop{
+                    margin-left: 22rem; 
+                }
+            }
+    }
+
+    &__reserva{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        @include m.desktop{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__boton{
+        @include m.boton(v.$blanco, v.$marronSuave);
+    }
+
+    &__nombre{
+        color: v.$marronSuave;
+        // font-weight: v.$delgada;
+    }
+
+    &__logout{
+        @include m.botonModal(v.$blanco, v.$rojoOscuro);
+    }
+
+}

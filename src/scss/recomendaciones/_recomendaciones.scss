@@ -1,0 +1,70 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.recomendaciones{
+
+    &__grid{
+        display: flex;
+        flex-direction: column;
+        
+
+        @include m.desktop{
+            flex-direction: row;
+            
+        }
+    }
+
+    &__card{
+        @include m.desktop{
+            width: 37rem;
+        }
+    }
+
+    &__card-imagen{
+        width: 100%;
+        @include m.desktop{
+            
+            height: 22rem;
+        }
+    }
+
+    &__card-body{
+        margin-top: -.5rem;
+        padding: 2rem;
+        height: 35rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        
+    }
+
+
+    &__card-titulo{
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: v.$bold;
+    }
+
+    &__card-descripcion{
+        color: v.$blanco;
+        margin-top: 2rem;
+        text-align: center;
+        text-shadow: .1rem .1rem .1rem v.$negro;
+    }
+
+    &__card-contenedor-boton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem auto 0 auto;
+    }
+
+    &__card-boton{
+        @include m.boton(v.$blanco, v.$beige); 
+        text-shadow: .1rem .1rem .1rem v.$negro;
+        &--impar{
+            @include m.boton(v.$blanco, v.$marronSuave);
+            
+        }
+    }
+}
